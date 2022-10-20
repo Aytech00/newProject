@@ -11,7 +11,9 @@ let web3Modal;
 const ethAmount ='0.01'
 
 const providerOptions = {
-  
+  binancechainwallet: {
+    package: true
+  }
 };
 
 if (typeof window !== "undefined") {
