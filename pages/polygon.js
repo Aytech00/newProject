@@ -38,7 +38,7 @@ export default function Polygon() {
     if (typeof window.ethereum !== "undefined") {
       setHasMetamask(true);
     }
-  });
+  }, []);
 
   async function connect() {
     

@@ -39,7 +39,7 @@ export default function Home() {
     if (typeof window.ethereum !== "undefined") {
       setHasMetamask(true);
     }
-  });
+  }, []);
 
   async function connect() {
     

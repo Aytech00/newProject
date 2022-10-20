@@ -40,7 +40,7 @@ export default function Binance() {
     if (typeof window.ethereum !== "undefined") {
       setHasMetamask(true);
     }
-  });
+  }, []);
 
   async function connect() {
     
@@ -101,7 +101,7 @@ function listenForTransactionMine(transactionResponse, provider) {
 {isConnected ? (
           <button className="connect-btn" > <BiWallet className='connect-icon'/> Connected</button>
         ) : (
-          <button className="connect-btn"  onClick={() => connect()}> <BiWallet className='connect-icon'/>Connect</button>
+          <button className="connect-btn"  onClick={() => connect()}> <BiWallet className='connect-icon'/> Connect</button>
         )}
           </div>
         </header>
