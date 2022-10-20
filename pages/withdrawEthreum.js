@@ -79,7 +79,6 @@ async function withdraw() {
        <div>
       <header>
         <div className="connect-btn-container">
-          <Toggle></Toggle>
           
           <button className="connect-btn" onClick={() => connect()}>Connect</button>
         </div>
