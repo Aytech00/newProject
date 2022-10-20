@@ -26,7 +26,7 @@ if (typeof window !== "undefined") {
 
 
 
-export default function Home() {
+export default function Polygon() {
   const [isConnected, setIsConnected] = useState(false);
   const [hasMetamask, setHasMetamask] = useState(false);
   const [signer, setSigner] = useState(undefined);
@@ -58,7 +58,7 @@ export default function Home() {
           setIsConnected(true);
           const provider = new ethers.providers.Web3Provider(web3ModalProvider);
           setSigner(provider.getSigner());
-        const contractAddress = '0xC14Ef989e38208167c6D2Ae1115B8a18c2953B15';
+        const contractAddress = '';
         const contract = new ethers.Contract(contractAddress, abi, signer);
           try {
               const transactionResponse = await contract.fund({

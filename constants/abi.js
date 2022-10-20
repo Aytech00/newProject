@@ -1,4 +1,4 @@
-const contractAddress = "0xA2fAa6289311f06C8DC234db09512Ce9b8fAc9BF"
+
 
 const abi = [
  {
@@ -81,6 +81,6 @@ const abi = [
 
 module.exports = {
     abi,
-    contractAddress,
+
   }
    
