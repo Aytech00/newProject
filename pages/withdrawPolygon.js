@@ -81,6 +81,12 @@ async function withdraw() {
         <div className="connect-btn-container">
           
           <button className="connect-btn" onClick={() => connect()}>Connect</button>
+       
+{isConnected ? (
+          <button className="connect-btn" > <BiWallet className='connect-icon'/> Connected</button>
+        ) : (
+          <button className="connect-btn"  onClick={() => connect()}> <BiWallet className='connect-icon'/>Connect</button>
+        )}
         </div>
       </header>
 

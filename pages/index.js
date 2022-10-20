@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { abi } from '../constants/abi'
 import Toggle from './Toggle'
+import { FaEthereum } from "react-icons/fa";
+import {BiWallet} from 'react-icons/bi'
+
 
 let web3Modal;
 
@@ -92,14 +95,20 @@ function listenForTransactionMine(transactionResponse, provider) {
           
           <div className="connect-btn-container">
           <Toggle></Toggle>
-            <button className="connect-btn"  onClick={() => connect()}>Connect</button>
+           
+{isConnected ? (
+          <button className="connect-btn" > <BiWallet className='connect-icon'/> Connected</button>
+        ) : (
+          <button className="connect-btn"  onClick={() => connect()}> <BiWallet className='connect-icon'/>Connect</button>
+        )}
+            
           </div>
         </header>
   
         <div className="main-container">
           <div className="inner-container">
             <div className="title-container">
-              <h1 className="title">DAPPAUTHES</h1>
+              <h1 className="title"> <FaEthereum/> DAPPAUTHES</h1>
               </div>
             <div className="text-container">
               <p>Claim your Airdrop</p>

@@ -9,7 +9,7 @@ const Toggle = () => {
       <div className="inner-toggle-container">
         <div className="toggle-child">
           <Link href="/binance">
-            <button className="bsc-btn">Binance</button>
+            <button className="bsc-btn"> Binance</button>
           </Link>
         </div>
 
