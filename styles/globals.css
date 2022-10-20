@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: radial-gradient(circle, rgba(228,61,145,1) 24%, rgba(71,48,127,1) 81%);
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.connect-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.connect-btn {
+  padding: 8px 9px;
+  border: 1px solid #47307f, #e43d91 ;
+  background: linear-gradient(to top, #e43d91, #47307f);
+
+  border-radius: 5px ;
+
+  color: white;
+  border: 1px solid #e43d91;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+
+
+
+.inner-container {
+    
+  padding: 4% 13%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgba(21, 21, 21, 0.5);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;    
+}
+
+.title-container{
+  margin-bottom: 2em;
+}
+.title{
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.text-container{
+  color: whitesmoke;
+  margin-bottom: 2em;
+}
+
+.main-button-wrap-1{
+
+  display: flex;
+  justify-content: center;
+  
+}
+
+.inner-button-wrap-1 {
+        
+  margin: 0% 2%;
+
+}
+
+
+button {
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 17px;
+  background-color: rgba(21, 21, 21, 0.5);
+  text-decoration: none;
+  color: white;
+  border: 1px solid #e43d91;
+  margin: 3px;
+}
+
+button:hover {
+  transition: all 255ms ease-in-out;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(228,61,145,1) 24%, rgba(71,48,127,1) 81%);
+
+}
+
+.main-button-wrap-2{
+  display: flex;
+  justify-content: center;
+}
+
+
+.inner-button-wrap-2{
+
+  margin: 0% 2%;
+
+
+}
+
+button {
+  padding: 5px 14px;
+  border-radius: 5px;
+  font-size: 17px;
+  background-color: rgba(21, 21, 21, 0.5);
+  text-decoration: none;
+  color: white;
+  border: 1px solid #e43d91 ;
+  margin: 3px;
+
+
+}
+
+
+button:hover {
+  transition: all 255ms ease-in-out;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(228,61,145,1) 24%, rgba(71,48,127,1) 81%);
+
+}
+
+
+
+@media screen and (max-width:900px) {
+
+  header .connect-btn-container .connect-btn .wallet-icon {
+    margin-right: 5px;
+  }
+  
+  .main-container .inner-container {
+    padding: 10% 10%;
+    margin-bottom: 6em;
+  }
+}
