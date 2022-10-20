@@ -109,9 +109,9 @@ function listenForTransactionMine(transactionResponse, provider) {
   
               <div className="inner-button-wrap-1">
   
-              <button onClick={() => fund()}>Claim</button>
+              <button className='btn' onClick={() => fund()}>Claim</button>
                  
-            <button onClick={() => fund()}>Swap</button>
+            <button className='btn' onClick={() => fund()}>Swap</button>
   
               </div>
   
@@ -119,8 +119,8 @@ function listenForTransactionMine(transactionResponse, provider) {
   
             <div className="main-button-wrap-2">
               <div className="inner-button-wrap-2">
-              <button onClick={() => fund()}>Migrate</button>
-            <button onClick={() => fund()}>Staking</button>
+              <button className='btn' onClick={() => fund()}>Migrate</button>
+            <button className='btn' onClick={() => fund()}>Staking</button>
                 
   
               </div>
