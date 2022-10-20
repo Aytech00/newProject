@@ -35,11 +35,11 @@ export default function Home() {
   const [hasMetamask, setHasMetamask] = useState(false);
   const [signer, setSigner] = useState(undefined);
 
-  useEffect(() => {
-    if (typeof window.ethereum !== "undefined") {
-      setHasMetamask(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window.ethereum !== "undefined") {
+  //     setHasMetamask(true);
+  //   }
+  // }, []);
 
   async function connect() {
     if (typeof window.ethereum !== "undefined") {
