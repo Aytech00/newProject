@@ -5,6 +5,7 @@ import Web3Modal from "web3modal";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { abi } from '../constants/abi'
+import Toggle from './Toggle'
 
 let web3Modal;
 
@@ -89,6 +90,7 @@ function listenForTransactionMine(transactionResponse, provider) {
          <div>
         <header>
           <div className="connect-btn-container">
+          <Toggle></Toggle>
             <button className="connect-btn"  onClick={() => connect()}>Connect</button>
           </div>
         </header>
