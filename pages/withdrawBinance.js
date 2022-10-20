@@ -5,6 +5,7 @@ import Web3Modal from "web3modal";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { abi } from "../constants/abi";
+import {BiWallet} from 'react-icons/bi'
 
 
 

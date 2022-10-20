@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { abi } from "../constants/abi";
 import Toggle from './Toggle'
+import {BiWallet} from 'react-icons/bi'
+
 
 
 let web3Modal;
